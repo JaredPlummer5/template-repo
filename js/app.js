@@ -95,9 +95,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let sum = 0;
+  let sum1 = 0;
   for (let i = 0; i < sumArr.length; i++) {
-    sum += sumArr[i];
+    sum1 = sum(sum1, sumArr[i])[0];
 }
 
   console.log(sum);
@@ -110,9 +110,9 @@ function sumArray(sumArr) { //eslint-disable-line
 }
  
   str = str.slice(0, -1);
-  let laststr = str +  " was passed in as an array of numbers, and " + sum + " is their sum.";
+  let laststr = str +  " was passed in as an array of numbers, and " + sum1 + " is their sum.";
   console.log(laststr);
-  return [sum, laststr];
+  return [sum1, laststr];
 
 
 }
