@@ -18,7 +18,7 @@ return array;
 
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -35,7 +35,8 @@ function multiply(a, b) { //eslint-disable-line
 
 
     let mul = a * b;
-    const arrayMul = [mul, `The product of ${a} and ${b} is ${mul}`];
+    const arrayMul = [mul, `The product of ${a} and ${b} is ${mul}.`];
+    
     return arrayMul;
 
 }
@@ -58,12 +59,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-// function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+let funSum1 = sum(a, b)[0];
+// This line set a varible equal to the function on question one
+let funSum2 = sum(funSum1, c)[0];
+// This line takes the varible adds the thrid parameter so that you don't have to change the other function
+let funMul1 = multiply(a, b)[0];
+// This line set a varible equal to the function on question two
+let funMul2 = multiply(funMul1, c)[0];
+// This line takes the varible adds the thrid parameter so that you don't have to change the other function
 
-// }
+const arraySandM = [funSum2, funMul2 ,`${a} and ${b} and ${c} sum to ${funSum2}.`, `The product of ${a} and ${b} and ${c} is ${funMul2}.`];
+
+
+return arraySandM;
+
+}
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,11 +92,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-// let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4]; //eslint-disable-line
 
-// function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr) { //eslint-disable-line
 
-// }
+}
 
 // Here is the test for sumArray(); uncomment it to run it
 
