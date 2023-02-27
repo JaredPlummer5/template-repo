@@ -138,7 +138,12 @@ function multiplyArray(multArr) { //eslint-disable-line
   let product = 1;
   for (let i = 0; i < multArr.length; i++){
 
-    product *= multArr[i];
+
+  let product = 1;
+  for (let i = 0; i < multArr.length; i++){
+
+    product = multiply(product, multArr[i])[0];
+
   }
   //console.log(product);
   let str = ''
@@ -147,8 +152,10 @@ function multiplyArray(multArr) { //eslint-disable-line
     str += multArr[j] + ',';
   }
   str = str.slice(0, -1);
-  let lastStr2 = `The numbers ${str} have a product of ${product}.`
-  console.log(lastStr2)
+
+  let lastStr2 = `The numbers ${str} have a product of ${product}.`;
+  console.log(lastStr2);
+
   return [product,lastStr2];
 
 }
